@@ -1,16 +1,55 @@
-***DATABASE***
+DATABASE
 
 Database: memorizzare e fornirci informazioni sui dati
 
 Database relazionale [un altro è database documentale]
-
 Il primo aspetto si chiama Entità.
 
 Entità: parte della realtà con le informazioni che mi interessano di più. In genere finiscono come tabelle e ogni colonna avrà un'informazione.
 Record o Tupla: insieme di dati.
 
 Secondo aspetto: relazioni.
-- Relazione: ciò che permette di mettere appunto in relazione due entità o più.
+Relazione: ciò che permette di mettere appunto in relazione due entità o più.
+Esempio: persona[entità1] che fa[relazione] un ordine[entità2].
+Esempio 2: un ordine[entità2] fatto di[relazione] articoli[entità3].
+
+Questo è uno schema E/R (entity relationship).
+
+--------------------
+
+PHPMYADMIN
+
+Attivare Apache fino a segnale verde, attivare Mysql fino a segnale verde. Aprire browser, andare su localhost o 127.0.0.1 e poi PhPMyAdmin dalla pagina localhost
+
+Solo il database di test o creati da noi si possono toccare, gli altri no!!!
+
+Creare nuovo database: nuovo, inserire nome - lasciamo la codifica com'è, nuovo. creare tabelle: scegliere numero di campi (esempio: tre campi), inserire quantità ed eseguire.
+
+Tipo:
+INT: intero
+VARCHAR: campi delimitati di test
+TEXT: testo illimitato
+DATE: campo tipo data
+
+Per inserire dati, cliccare su Inserisci. Nel campo Valori, riempire i campi e cliccare su Esegui. La pagina mostrerà l'esecuzione eseguita in codice. Tornare su mostra per vedere i dati salvati.
+
+NOTA: nelle query, i decimali vanno scritti col punto (esempio: 3.5 e NON 3,5 perché la virgola divide i singoli campi).
+---------------------------
+4 operazioni fondamentali di SLQ. Operazioni base di manipolazione dati, dette anche CRUD (create, read, update, delete)
+
+SELECT - dammi
+DATABASE
+
+Database: memorizzare e fornirci informazioni sui dati
+
+Database relazionale [un altro è database documentale]
+Il primo aspetto si chiama Entità.
+
+Entità: parte della realtà con le informazioni che mi interessano di più. In genere finiscono come tabelle e ogni colonna avrà un'informazione.
+Record o Tupla: insieme di dati.
+
+Secondo aspetto: relazioni.
+Relazione: ciò che permette di mettere appunto in relazione due entità o più.
 Esempio: persona[entità1] che fa[relazione] un ordine[entità2].
 Esempio 2: un ordine[entità2] fatto di[relazione] articoli[entità3].
 
@@ -74,4 +113,12 @@ aggiorna la tabella clienti impostando il campo anno di nascita a 1997
 UPDATE clienti SET anno_nascita = 1997 WHERE cognome='Arosti' AND nome='Matteo'
 aggiorna la tabella clienti impostando il campo anno di nascita a 1997 DOVE il cognome è Arosti e il nome è Matteo
 
+REGOLONE: quando si fanno update e delete, sempre sempre sempre leggere la query che si fa!!!! se si fa senza where si fanno danni
+
 DELETE - cancella
+
+DELETE FROM clienti 
+cancella TUTTO da clienti (manca il where)
+
+DELETE FROM clienti WHERE codice_fiscale='ABCDEF01G23H45I67J'
+cancella dalla tabella clienti dove il codice fiscale è ABCDEF01G23H45I67J
