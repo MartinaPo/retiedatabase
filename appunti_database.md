@@ -3,13 +3,14 @@
 Database: memorizzare e fornirci informazioni sui dati
 
 Database relazionale [un altro è database documentale]
+
 Il primo aspetto si chiama Entità.
 
 Entità: parte della realtà con le informazioni che mi interessano di più. In genere finiscono come tabelle e ogni colonna avrà un'informazione.
 Record o Tupla: insieme di dati.
 
 Secondo aspetto: relazioni.
-Relazione: ciò che permette di mettere appunto in relazione due entità o più.
+- Relazione: ciò che permette di mettere appunto in relazione due entità o più.
 Esempio: persona[entità1] che fa[relazione] un ordine[entità2].
 Esempio 2: un ordine[entità2] fatto di[relazione] articoli[entità3].
 
