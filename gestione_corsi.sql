@@ -1,4 +1,15 @@
-/*Questo file va messo nella directory principale di XAMPP, per esempio: C:\xampp*/
+/*Questo file va messo nella directory principale di XAMPP, per esempio: C:\xampp
+
+TESTING: aprire XAMPP e attivare Apache e MySql. Aprire la shell di XAMPP e digitare:
+mysql -u root < gestione_corsi.sql
+se vi sono errori verificare eventuali errori di sintassi nel codice.
+
+per entrare nel database selezionando gestione_corsi direttamente:
+mysql -u root -D gestione_corsi
+
+per vedere le tabelle presenti in gestione_corsi:
+show tables;
+*/
 
 DROP DATABASE IF EXISTS gestione_corsi;
 CREATE DATABASE gestione_corsi;
