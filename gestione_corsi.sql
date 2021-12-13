@@ -1,6 +1,7 @@
 /*Questo file va messo nella directory principale di XAMPP, per esempio: C:\xampp
 
-TESTING: aprire XAMPP e attivare Apache e MySql. Aprire la shell di XAMPP e digitare:
+TESTING: aprire XAMPP e attivare MySql (Apache se si vuole usare MyPHPAdmin). Aprire la shell di XAMPP e digitare:
+
 mysql -u root < gestione_corsi.sql
 se vi sono errori verificare eventuali errori di sintassi nel codice.
 
@@ -9,6 +10,10 @@ mysql -u root -D gestione_corsi
 
 per vedere le tabelle presenti in gestione_corsi:
 show tables;
+
+per vedere i dati all'interno delle tabelle:
+
+SELECT * FROM docenti/frequenze/alunni/materie, a seconda di quale tabella si vuole analizzare.
 */
 
 DROP DATABASE IF EXISTS gestione_corsi;
